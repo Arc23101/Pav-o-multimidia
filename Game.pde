@@ -1,9 +1,13 @@
-// game screen
+  // game screen
 
 int currentLevel = 1;
 
 String[] optionsLevel1 = { "print(", "\"Hello World\"", ")" };
 boolean[] usedOptionLevel1 = { false, false, false };
+
+String[] optionsLevel2 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel2 = { false, false, false, false };
+
 
 ArrayList<Integer> picked = new ArrayList<Integer>();
 
@@ -101,6 +105,11 @@ void drawLevel1() {
 
 
 void drawLevel2() {
+  picked.clear();  
+  for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
+}
+
+void drawLevel3() {
   picked.clear();  
   for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
 }
