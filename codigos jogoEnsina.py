@@ -1,3 +1,58 @@
+# 2 print
+
+#explicação 
+'''
+    A função PRINT é a forma mais básica e crucial de comunicar o programa com o usuário,
+sendo usada para exibir na tela mensagens de texto, os valores armazenados em variáveis
+ou o resultado final de qualquer cálculo ou processamento de dados realizado internamente.
+'''
+print("Oi")
+# Oi
+
+# 3 input
+
+#explicação
+'''
+    O comando INPUT é essencial, pois permite que o programa solicite e capture dados
+diretamente do usuário enquanto está em execução, fazendo com que ele pause a ação e
+espere que uma informação, como um nome ou número, seja digitada e armazenada em
+uma variável.
+'''
+
+valor1 = int(input("Insira o número inteiro: "))
+
+
+# 4 operações matemáticas
+
+#explicação
+'''
+    O s operadores matemáticos (+,-,*,/ e outros) são os símbolos que seu código utiliza para
+realizar todas as operações numéricas necessárias, permitindo que você calcule novos
+valores a partir de dados existentes, como somar preços ou dividir quantidades, e então
+usar esses resultados.
+'''
+
+resultado = valor1 + 5
+print(resultado) #valor que o usuário insiriu no input + 5
+
+
+# 5 operações de comparação
+
+#explicação
+'''
+Os Operadores de Comparação (==,>,<,!=, etc.) são usados para testar relações entre valores (se são iguais, diferentes, maiores ou menores). O resultado dessas comparações é sempre um valor booleano: True (Verdadeiro) se a condição for atendida ou False (Falso) se não for.
+== : iguail
+>= : maior ou igual
+<= : menor ou igual
+!= : diferente que
+> : maior que 
+< : menor que  
+'''
+
+print(8 != 5 and 10 > 7)
+# True (verdadeiro)
+
+
 # 7 elif/else 
 
 #explicação
@@ -75,4 +130,6 @@ print("Número de frutas na lista: " , len(frutas))
 #Conta de 0 até 4
 for numero in range(5):
     print(numero) #0 , 1 , 2 , 3 , 4
+
+
 
