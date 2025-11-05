@@ -1,3 +1,25 @@
+# 1 tipos de variaveis
+
+'''Explicação das variáveis 
+[  ] Int
+Int é usada para números que sejam inteiros, ou seja, números que representam quantidades que não sejam quebradas. Esses números pode ser tanto negativo, como positivo. Exemplo: quantidade de doces no pote, carros estacionados.
+[  ] Float
+Utilizada para representar números decimais, como medidas, percentuais ou números que contenham parte fracionária. Exemplo: altura, peso.
+[  ] String
+São utilizadas para representar e manipular textos, ou seja,  usado para armazenar informações de texto. Exemplo: nome, mensagem.
+[  ] Bool
+É utilizado para representar valores lógicos,  podendo assumir valores de verdadeiro ou falso. Exemplo: janela fechada ou aberta
+'''
+
+print("Escolha o tipo de variável usada para representar numero com vírgula:")
+print("Opções: int, float, bool, str")
+variavel = input("Digite aqui: ")
+if variavel == "float":
+   print("Você escolheu 'float'. Exemplo: altura = 1.80")
+else:
+   print("Tipo inválido. Tente novamente com: int, float, bool ou str.")
+   variavel = input("Digite aqui: ")
+
 # 2 print
 
 #explicação 
@@ -53,6 +75,19 @@ print(8 != 5 and 10 > 7)
 # True (verdadeiro)
 
 
+# 6 if
+'''
+[  ] If
+Usado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.
+'''
+
+idade = int(input(“Digite sua idade:”))
+if idade <= 16:
+	print(f”Você pode viajar sozinho.”)
+else:
+	print(f”Você já pode viajar sozinho.”)
+
+
 # 7 elif/else 
 
 #explicação
@@ -68,8 +103,21 @@ elif temp > 19 and temp <= 27:
 else:
     print("Está quente.")
 
+# 8 while
 
-# 10 listas
+'''
+É usado como um recurso para executar um bloco de códigos receitas vezes enquanto é a ação do verdadeira. Quando a ação  pass a ser falsa, a execução do loop é interrompida.É ideal para situações em que o número de repetições é desconhecido previamente, como esperar por uma entrada válida do usuário ou repetir uma ação até que um evento específico ocorra.
+'''
+
+contador = int(input(“EScolha um número:”))
+numero = 0 
+while numero <= contador:
+	print(numero)
+	numero = numero + 1
+print(“Programa finalizado”)
+
+
+# 9 listas
 
 #explicação
 '''
@@ -93,7 +141,7 @@ print(comidas[1]) #batata
 print(comidas[2]) #sorvete
 
 
-# 11 for(1)
+# 10 for(1)
 #explicação
 '''
     "for" é um laço de repetição. É como um assistente que repete uma acão para cada item até alcançar a condição pré determinada.
@@ -106,7 +154,7 @@ for individuo in amigos: #Para cada intem na lista print a seguinte mensagem
     # O mesmo acontece para os outros itens da lista
 
 
-# 12 for(2):len(lista)
+# 11 for(2):len(lista)
 
 #explicação:
 '''
@@ -119,7 +167,7 @@ print("Número de frutas na lista: " , len(frutas))
     # Número de frutas na lista: 4
 
 
-# 13 for(3): range
+# 12 for(3): range
 
 #explicação:
 '''
@@ -130,6 +178,7 @@ print("Número de frutas na lista: " , len(frutas))
 #Conta de 0 até 4
 for numero in range(5):
     print(numero) #0 , 1 , 2 , 3 , 4
+
 
 
 
