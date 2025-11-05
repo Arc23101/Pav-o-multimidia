@@ -4,6 +4,7 @@ int currentLevel = 1;
 
 String[] optionsLevel1 = { "print(", "\"Hello World\"", ")" };
 boolean[] usedOptionLevel1 = { false, false, false };
+int[] answerLevel1 = {0,1,2};
 
 String[] optionsLevel2 = { "Numero =", "\"1010\"", "Booleana = ","True " };
 boolean[] usedOptionLevel2 = { false, false, false, false };
@@ -32,6 +33,12 @@ boolean[] usedOptionLevel9 = { false, false, false, false };
 
 ArrayList<Integer> picked = new ArrayList<Integer>();
 
+// GUI
+int btnX = 0;
+int btnY = 0;
+int btnW = 180;
+int btnH = 50;
+
 
 void drawGame() {
   basicInterface();
@@ -53,6 +60,21 @@ void basicInterface() {
   
   fill(#D0CFCF);
   rect(width/2, height/2, width/2, height/2);
+  
+  // continue button
+  
+  btnX = width/2 + padding;
+  btnY = height - padding*2;
+  
+  boolean canCheck = picked.size() == optionsLevel1.length;
+  
+  if (canCheck) fill(#ffffff); // white active
+  else fill(#888888); // grey disabled
+
+  rect(btnX, btnY, btnW, btnH);
+
+  fill(#000000);
+  text("CONTINUAR", btnX + padding, btnY + padding);
 }
 
 void handleGameClick() {
@@ -87,7 +109,27 @@ void handleGameClick() {
       }
     }
   }
+  if (mouseX > btnX && mouseX < btnX+btnW &&
+    mouseY > btnY && mouseY < btnY+btnH) {
+
+  if (picked.size() == optionsLevel1.length) {
+    if (isCorrect(answerLevel1)) {
+      currentLevel = 2; // go to next level
+      picked.clear();
+      for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
+    }
+  }
 }
+}
+
+boolean isCorrect(int[] answer) {
+  if (picked.size() != answer.length) return false;
+  for (int i = 0; i < answer.length; i++) {
+    if (picked.get(i) != answer[i]) return false;
+  }
+  return true;
+}
+
 
 
 // levels
