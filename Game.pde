@@ -8,6 +8,27 @@ boolean[] usedOptionLevel1 = { false, false, false };
 String[] optionsLevel2 = { "Numero =", "\"1010\"", "Booleana = ","True " };
 boolean[] usedOptionLevel2 = { false, false, false, false };
 
+String[] optionsLevel3 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel3 = { false, false, false, false };
+
+String[] optionsLevel4 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel4 = { false, false, false, false };
+
+String[] optionsLevel5 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel5 = { false, false, false, false };
+
+String[] optionsLevel6 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel6 = { false, false, false, false };
+
+String[] optionsLevel7 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel = { false, false, false, false };
+
+String[] optionsLevel8 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel8 = { false, false, false, false };
+
+String[] optionsLevel9 = { "Numero =", "\"1010\"", "Booleana = ","True " };
+boolean[] usedOptionLevel9 = { false, false, false, false };
+
 
 ArrayList<Integer> picked = new ArrayList<Integer>();
 
