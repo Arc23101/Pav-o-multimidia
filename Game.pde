@@ -48,8 +48,8 @@ void handleGameClick() {
 
     // check clickable options (only if not removed)
     for (int i = 0; i < optionsLevel1.length; i++) {
-      float bx = width/2 + 20;
-      float by = height/2 + 100 + i*40;
+      float bx = width/2 + padding;
+      float by = height/2 + padding * 2 + i*40;
 
       if (mouseX > bx && mouseX < bx+200 &&
           mouseY > by-20 && mouseY < by) {
