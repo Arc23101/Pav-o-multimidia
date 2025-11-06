@@ -1,7 +1,7 @@
 // menu screen
 
 void drawMenu() {
-  background(blue);
+  background(blue1);
 
   rectMode(CENTER);
   textAlign(CENTER, CENTER);

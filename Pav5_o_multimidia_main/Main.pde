@@ -8,7 +8,7 @@ int padding = 24;
 PFont f;
 color blue1 = #97BDDE;
 color blue2 = #79A6CC;
-color blue3 = #4C8BC2;
+color blue3 = #689BC6;
 color darkBlue = #376E9D;
 color yellow = #FFCC3C;
 
