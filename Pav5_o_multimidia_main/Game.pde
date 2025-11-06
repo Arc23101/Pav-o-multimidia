@@ -502,13 +502,13 @@ void drawLevel11() {
   text("Explicação:", padding, padding * 2 + 50); 
   
   // explanation title
-  text("", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
+  text("Um dos principais acompanhantes do for é o len.\nQuando é colocado na frente de umma lista, o termo passa a significar a quantidade de itens da lista.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
   image(img, padding, height - 500 - padding, 650, 700); 
 
   // title for challenge
-  text("#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).", width/2 + padding, padding * 2);
+  text("Mostre quantos itens há em uma lista de cores.", width/2 + padding, padding * 2);
 
   // show picked code middle right
   String code = "";
@@ -522,7 +522,7 @@ void drawLevel11() {
     float by = height/2 + padding * 2 + i*40;
     text(optionsLevel11[i], bx, by);
   }
-  drawLevelTitle("For"); 
+  drawLevelTitle("Len"); 
 }
 
 void drawLevel12() {
@@ -533,13 +533,13 @@ void drawLevel12() {
   text("Explicação:", padding, padding * 2 + 50); 
   
   // explanation title
-  text("Usado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
+  text("O Range é um acompanhante que cria uma sequência de números para serem usados no For e em outras situações.\nQuando números são colocados após o Range e entre parênteses, eles determinam o funcionamento no Range.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
   image(img, padding, height - 500 - padding, 650, 700); 
 
   // title for challenge
-  text("#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).", width/2 + padding, padding * 2);
+  text("Mostre os números de 1 até 10 com for e range.", width/2 + padding, padding * 2);
 
   // show picked code middle right
   String code = "";
@@ -553,7 +553,7 @@ void drawLevel12() {
     float by = height/2 + padding * 2 + i*40;
     text(optionsLevel12[i], bx, by);
   }
-  drawLevelTitle("For");
+  drawLevelTitle("Range");
 }
 void drawLevel13() {
   fill(0);
