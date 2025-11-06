@@ -75,28 +75,32 @@ void drawGame() {
 void basicInterface() {
   noStroke();
   
-  fill(#FFFFFF);
+  fill(blue1);
   rect(0, 0, width/2, height);
   
-  fill(#E2E2E2);
+  fill(blue2);
   rect(width/2, 0, width/2, height/2);
   
-  fill(#D0CFCF);
+  fill(blue3);
   rect(width/2, height/2, width/2, height/2);
   
   // continue button 
   
   btnX = width/2 + padding;
-  btnY = height - padding*2;
+  btnY = height - padding*4;
   
   boolean canCheck = picked.size() == optionsLevel1.length;
   
-  if (canCheck) fill(#ffffff); // white active
-  else fill(#888888); // grey disabled
+  fill(darkBlue);
+  rect(btnX, btnY, btnW, btnH+10);
+  
+  if (canCheck) fill(yellow); //  active
+  else fill(blue1); // disabled
 
   rect(btnX, btnY, btnW, btnH);
-
-  fill(#000000);
+  
+  textSize(24);
+  fill(darkBlue);
   textAlign(CENTER, CENTER);
   text("CONTINUAR", btnX + btnW/2, btnY + btnH/2);
   textAlign(LEFT, BASELINE); 
@@ -169,13 +173,13 @@ void drawLevelTitle(String topic) {
   float rectW = 200;
   float rectH = 40;  
   
-  fill(#E2E2E2); 
+  fill(blue3); 
   noStroke();
   rect(rectX, rectY, rectW, rectH); 
   
   textAlign(CENTER, CENTER);
-  fill(#000000);
-  textSize(20);
+  fill(#ffffff);
+  textSize(32);
   text(topic, rectX + rectW/2, rectY + rectH/2);
 
   textAlign(LEFT, BASELINE); 
@@ -186,7 +190,7 @@ void drawLevelTitle(String topic) {
 void drawLevel1() {
   drawLevelTitle("Variáveis");
   
-  fill(0);
+  fill(#ffffff);
   textSize(24);
   
   // title for explanation 
