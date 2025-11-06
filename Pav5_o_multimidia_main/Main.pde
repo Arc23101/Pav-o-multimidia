@@ -6,7 +6,9 @@ int state = 0; // menu = 0, game = 1, end = 2
 // GUI vars
 int padding = 24;
 PFont f;
-color blue = #97BDDE;
+color blue1 = #97BDDE;
+color blue2 = #79A6CC;
+color blue3 = #4C8BC2;
 color darkBlue = #376E9D;
 color yellow = #FFCC3C;
 
