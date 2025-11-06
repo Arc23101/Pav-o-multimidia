@@ -151,7 +151,7 @@ int btnY = 0;
 int btnW = 180;
 int btnH = 50;
 
-int confettiH = height * -2;
+int confettiH = height;
 boolean hasCelebrated = false;
 
 
@@ -175,16 +175,12 @@ void drawGame() {
   }
   
   if (isCorrect(answersLevels[currentLevel]) && !hasCelebrated) {
-  image(confetti, 0, confettiH, width, height);
-  confettiH = confettiH + 20;
+  image(confetti, width/2, confettiH, width, height);
+  confettiH = confettiH + 40;
   
   if (confettiH > height) {
     hasCelebrated = true;
   }
-}
-  
-  if (confettiH > height) {
-    confettiH = -height * 2;
   }
 }
 
@@ -272,21 +268,26 @@ void handleGameClick() {
   if (mouseX > btnX && mouseX < btnX+btnW &&
       mouseY > btnY && mouseY < btnY+btnH) {
 
-    if (picked.size() == optionsLevels[currentLevel].length) {
-      if (isCorrect(answersLevels[currentLevel])) {
-
-        currentLevel++; 
+          if (picked.size() == optionsLevels[currentLevel].length) {
+      
+            if (isCorrect(answersLevels[currentLevel])) {
+              if (currentLevel > 11) {
+                hasCelebrated = false;
+                confettiH = -height;
+                currentLevel = 1;
+                Arrays.fill(usedOptionsLevels[currentLevel], false);
+                state = 2;
+              } else {
+                currentLevel++; 
+                hasCelebrated = false;
+                confettiH = -height;
         
-        picked.clear();
-        Arrays.fill(usedOptionsLevels[currentLevel], false);
-
-        
-        if (currentLevel > 12) {
-          state = 2; 
-        }
-      }
+                picked.clear();
+                Arrays.fill(usedOptionsLevels[currentLevel], false);
+              }
+          }
+       }
     }
-  }
 }
 
 void drawLevelTitle(String topic) {
