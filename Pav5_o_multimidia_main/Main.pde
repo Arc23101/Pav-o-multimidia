@@ -15,6 +15,9 @@ color yellow = #FFCC3C;
 // media
 PImage img;
 
+import processing.sound.*;
+SoundFile wrongSound;
+
 
 void setup() {
   size(1720, 980);
@@ -26,6 +29,9 @@ void setup() {
   // font
   f = createFont("Pixellari.ttf", 32);
   textFont(f);
+  
+  // sound
+  wrongSound = new SoundFile(this, "soundE.mp3");
 }
 
 void draw() {

@@ -148,23 +148,25 @@ void handleGameClick() {
   }
 
   if (mouseX > btnX && mouseX < btnX+btnW &&
-      mouseY > btnY && mouseY < btnY+btnH) {
+    mouseY > btnY && mouseY < btnY+btnH) {
 
-    if (picked.size() == optionsLevel1.length) {
+  if (picked.size() == optionsLevel1.length) {
 
-      if (isCorrect(answerLevel1)) {
-        
-        currentLevel++; 
-        
-        picked.clear();
-        for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
-        
-        if (currentLevel > 13) {
-          state = 2; 
-        }
-      }
+    // play click
+    //clickSound.jump(0); 
+    //clickSound.play();
+
+    if (isCorrect(answerLevel1)) {
+      currentLevel++;
+      picked.clear();
+      for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
+      if (currentLevel > 13) state = 2;
+    } else {
+      wrongSound.jump(0); 
+      wrongSound.play();
     }
   }
+}
 }
 
 void drawLevelTitle(String topic) {
