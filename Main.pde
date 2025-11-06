@@ -7,7 +7,7 @@ int state = 0; // menu = 0, game = 1, end = 2
 int padding = 30;
 
 // media
-PImage img, calculadora, print, ints;
+PImage img;
 
 
 void setup() {
@@ -16,10 +16,6 @@ void setup() {
   
   // images
   img = loadImage("image.png");
-  calculadora = loadImage("calculadora.png");
-  print = loadImage("print.png");
-  ints = loadImage("ints.png");
-  
 }
 
 void draw() {
