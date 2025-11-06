@@ -20,7 +20,7 @@ SoundFile wrongSound;
 
 
 void setup() {
-  size(1720, 680);
+  size(1720, 980);
   pixelDensity(1);
   
   // images
