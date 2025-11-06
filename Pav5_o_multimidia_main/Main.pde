@@ -13,7 +13,7 @@ color darkBlue = #376E9D;
 color yellow = #FFCC3C;
 
 // media
-PImage img;
+PImage img, confetti;
 
 import processing.sound.*;
 SoundFile wrongSound;
@@ -25,6 +25,7 @@ void setup() {
   
   // images
   img = loadImage("image.png");
+  confetti = loadImage("confetti.png");
   
   // font
   f = createFont("Pixellari.ttf", 32);

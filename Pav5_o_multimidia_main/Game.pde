@@ -50,6 +50,9 @@ int btnY = 0;
 int btnW = 180;
 int btnH = 50;
 
+int confettiH = height * -2;
+boolean hasCelebrated = false;
+
 
 void drawGame() {
   basicInterface();
@@ -70,6 +73,18 @@ void drawGame() {
   case 13: drawLevel12(); break;
   }
   
+  if (isCorrect(answerLevel1) && !hasCelebrated) {
+  image(confetti, 0, confettiH, width, height);
+  confettiH = confettiH + 20;
+  
+  if (confettiH > height) {
+    hasCelebrated = true;
+  }
+}
+  
+  if (confettiH > height) {
+    confettiH = -height * 2;
+  }
 }
 
 void basicInterface() {
@@ -150,23 +165,28 @@ void handleGameClick() {
   if (mouseX > btnX && mouseX < btnX+btnW &&
     mouseY > btnY && mouseY < btnY+btnH) {
 
-  if (picked.size() == optionsLevel1.length) {
+    if (picked.size() == optionsLevel1.length) {
 
     // play click
     //clickSound.jump(0); 
     //clickSound.play();
 
-    if (isCorrect(answerLevel1)) {
-      currentLevel++;
-      picked.clear();
-      for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
-      if (currentLevel > 13) state = 2;
-    } else {
-      wrongSound.jump(0); 
-      wrongSound.play();
+      if (isCorrect(answerLevel1)) {
+        if (isCorrect(answerLevel1)) {
+          currentLevel++;
+          hasCelebrated = false;
+          confettiH = height * -2;
+           picked.clear();
+        }
+
+        for (int i = 0; i < usedOptionLevel1.length; i++) usedOptionLevel1[i] = false;
+          if (currentLevel > 13) state = 2;
+        } else {
+          wrongSound.jump(0); 
+          wrongSound.play();
+        }
+      }
     }
-  }
-}
 }
 
 void drawLevelTitle(String topic) {
