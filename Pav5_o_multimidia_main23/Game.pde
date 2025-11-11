@@ -322,7 +322,7 @@ void drawLevel1() {
   
   // example image
   
-  image(img, width/4, height/4 + height/2 - padding, 650, 300); 
+  image(pu1, width/4, height/4 + height/2 - padding, 650, 300); 
 
   // title for challenge
   text("Crie quatro variáveis diferentes (uma de cada tipo: int, float, str, bool) e use print() para mostrar o valor de cada uma delas na tela.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -351,7 +351,7 @@ void drawLevel2() {
   text("A função PRINT é a forma mais básica e crucial de comunicar o programa com o usuário,\nsendo usada para exibir na tela mensagens de texto, os valores armazenados em variáveis\nou o resultado final de qualquer cálculo ou processamento de dados realizado internamente.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu2, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Mostre na tela uma frase que diga um nome e o que gosta de fazer..", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -381,7 +381,7 @@ void drawLevel3() {
   text("O comando INPUT é essencial, pois permite que o programa solicite e capture dados\ndiretamente do usuário enquanto está em execução, fazendo com que ele pause a ação e\nespere que uma informação, como um nome ou número, seja digitada e armazenada em\numa variável", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu3, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Peça o nome do usuário e mostre uma mensagem de boas-vindas", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -411,7 +411,7 @@ void drawLevel4() {
   text("Os operadores matemáticos (+,-,*,/ e outros) são os símbolos que seu código utiliza para\nrealizar todas as operações numéricas necessárias, permitindo que você calcule novos\nvalores a partir de dados existentes, como somar preços ou dividir quantidades, e então\nusar esses resultados.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu4, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Peça dois números e mostre a soma deles.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -441,7 +441,7 @@ void drawLevel5() {
   text("Os Operadores de Comparação (==,>,<,!=, etc.) são usados para testar relações entre valores (se são iguais, diferentes, maiores ou menores). O resultado dessas comparações é sempre um valor booleano: True (Verdadeiro) se a condição for atendida ou False (Falso) se não for.\n== : iguail\n>= : maior ou igual\n<= : menor ou igual\n!= : diferente que\n> : maior que \n< : menor que ", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu5, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Peça a idade de uma pessoa e diga se ela é maior de idade (18 ou mais).", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -471,7 +471,7 @@ void drawLevel6() {
   text("Usado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu6, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -501,7 +501,7 @@ void drawLevel7() {
   text("O elif e o else são acompanhantes quase obrigatórios do if. São as outras condições que complementam a primeiraa.\nO else não precisa de uma condição, pois ele engloba tudo que não está no if e elif", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu7, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Peça a nota do aluno e mostre uma mensagem diferente para cada faixa de nota.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -531,7 +531,7 @@ void drawLevel8() {
   text("É usado como um recurso para executar um bloco de códigos receitas vezes enquanto é a ação do verdadeira. \nQuando a ação  pass a ser falsa, a execução do loop é interrompida.\nÉ ideal para situações em que o número de repetições é desconhecido previamente, como esperar por uma entrada válida do usuário ou repetir uma ação até que um evento específico ocorra.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu8, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Conte de 1 até 5 usando while.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -561,7 +561,7 @@ void drawLevel9() {
   text("Listas em python é como uma caixa onde se guarda 2 ou mais itens.\nColocando colchetes ([]) após chamar a lista, é possível acessar os itens delaa individualmente.\nA ordem dos itens da lista sempre começa na posição 0.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu9, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Crie uma lista com 3 comidas favoritas e mostre cada uma na tela.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -591,7 +591,7 @@ void drawLevel10() {
   text("for é um laço de repetição. É como um assistente que repete uma acão para cada item até alcançar a condição pré determinada.\nTradução: \nPara cada item NA lista, FAÇA isso.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu10, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("Use um for para mostrar todos os nomes de uma lista de amigos.", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -621,7 +621,7 @@ void drawLevel11() {
   text("", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu11, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);
@@ -651,7 +651,7 @@ void drawLevel12() {
   text("Usado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.", padding, padding * 4 + 50, width/2 - padding * 2, height - padding * 6); 
   
   // example image
-  image(img, width/4, height/4 + height/2 - padding, 650, 300);  
+  image(pu12, width/4, height/4 + height/2 - padding, 650, 300);  
 
   // title for challenge
   text("#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).", width/2 + padding, padding * 2, width/2 - padding * 8, height - padding * 6);

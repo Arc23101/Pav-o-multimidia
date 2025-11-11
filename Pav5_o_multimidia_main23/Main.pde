@@ -13,7 +13,7 @@ color darkBlue = #376E9D;
 color yellow = #FFCC3C;
 
 // media
-PImage img, confetti;
+PImage img, confetti, pu1, pu2, pu3, pu4, pu5, pu6, pu7, pu8, pu9, pu10, pu11, pu12;
 
 import processing.sound.*;
 SoundFile wrongSound;
@@ -24,7 +24,18 @@ void setup() {
   pixelDensity(1);
   
   // images
-  img = loadImage("image.png");
+  pu1 = loadImage("pu1.png");
+  pu2 = loadImage("pu2.png");
+  pu3 = loadImage("pu3.png");
+  pu4 = loadImage("pu4.png");
+  pu5 = loadImage("pu5.png");
+  pu6 = loadImage("pu6.png");
+  pu7 = loadImage("pu7.png");
+  pu8 = loadImage("pu8.png");
+  pu9 = loadImage("pu9.png");
+  pu10 = loadImage("pu10.png");
+  pu11 = loadImage("pu11.png");
+  pu12 = loadImage("pu12.png");
   confetti = loadImage("confetti.png");
   
   // font
