@@ -88,7 +88,8 @@ boolean isCorrect(int[] answer) {
 
 void handleGameClick() {
   if (state == 1) {
-    
+    click1.rewind();
+    click1.play();
     String[] options = optionsLevels[currentLevel];
     boolean[] used = usedOptionsLevels[currentLevel];
     
@@ -97,11 +98,10 @@ void handleGameClick() {
         mouseX < width &&
         mouseY > 0 &&
         mouseY < height/2) {
-
-      if (picked.size() > 0) {
-        int lastIndex = picked.remove(picked.size()-1);
-        usedOptionsLevels[currentLevel][lastIndex] = false;  // Mark the option as unused
-      }
+          if (picked.size() > 0) {
+            int lastIndex = picked.remove(picked.size()-1);
+            usedOptionsLevels[currentLevel][lastIndex] = false;  // Mark the option as unused
+          }
       return;
     }
 
@@ -112,8 +112,8 @@ void handleGameClick() {
 
       if (mouseX > bx && mouseX < bx + 200 &&
           mouseY > by && mouseY < by + 40) {
-
-        if (!used[i]) {  // If option is not already used
+         
+        if (!used[i]) {  // If option is not already used]
           picked.add(i);  // Add to picked list
           used[i] = true;  // Mark as used
         }
@@ -126,9 +126,13 @@ void handleGameClick() {
       mouseY > btnY && mouseY < btnY + btnH) {
 
     if (picked.size() == optionsLevels[currentLevel].length) {  // All options picked
+      click3.rewind();
+      click3.play();
       if (isCorrect(answersLevels[currentLevel])) {  // If the answer is correct
         hasCelebrated = false;
-        confettiH = -height;  
+        confettiH = -height; 
+        right.rewind();
+        right.play();
         
         picked.clear();  // Clear picked options
         Arrays.fill(usedOptionsLevels[currentLevel], false);  // Reset used options
@@ -140,7 +144,9 @@ void handleGameClick() {
         } else {
           currentLevel++;  // Go to next level
         }
-      }
+    } else {
+      wrong.rewind();
+      wrong.play();
     }
   }
 }

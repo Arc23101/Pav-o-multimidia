@@ -34,6 +34,11 @@ void handleMenuClick() {
         mouseX < width/2 + padding * 3 &&
         mouseY > height/2 + height/4 - 10 - padding * 2 &&
         mouseY < height/2 + height/4 - 10 + padding * 2) {
+          click3.rewind();
+          click3.play();
           state = 1;
+        } else {
+          click1.rewind();
+          click1.play();
         }
 }

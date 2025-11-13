@@ -15,8 +15,9 @@ color yellow = #FFCC3C;
 // media
 PImage img, confetti, pu1, pu2, pu3, pu4, pu5, pu6, pu7, pu8, pu9, pu10, pu11, pu12;
 
-import processing.sound.*;
-SoundFile wrongSound;
+import ddf.minim.*;
+Minim minim;
+AudioPlayer music, click1, click3, right, wrong;
 
 
 void setup() {
@@ -45,7 +46,16 @@ void setup() {
   imageMode(CENTER);
   
   // sound
-  wrongSound = new SoundFile(this, "soundE.mp3");
+  minim = new Minim(this);
+  
+  music = minim.loadFile("Getting it Done.mp3");
+  music.loop();        
+  music.setGain(-20);  
+  
+  click1 = minim.loadFile("click-1.mp3");
+  click3 = minim.loadFile("click-3.mp3");
+  right = minim.loadFile("right.mp3");
+  wrong = minim.loadFile("wrong.mp3");
 }
 
 void draw() {
