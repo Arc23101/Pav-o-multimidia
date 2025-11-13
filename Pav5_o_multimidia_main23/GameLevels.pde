@@ -132,7 +132,7 @@ void drawLevel5() {
 
 // Level 6: If
 void drawLevel6() {
-  String explanation = "Usado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.";
+  String explanation = "[  ] If\nUsado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.";
   String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";
   
   drawInfo("If", explanation, pu6, challenge);
@@ -174,7 +174,7 @@ void drawLevel7() {
 
 // Level 8: While
 void drawLevel8() {
-  String explanation = "É usado como um recurso para executar um bloco de códigos várias vezes enquanto a condição for verdadeira.\nQuando a condição se torna falsa, o loop é interrompido.";
+  String explanation = "É usado como um recurso para executar um bloco de códigos receitas vezes enquanto é a ação do verdadeira. Quando a ação  pass a ser falsa, a execução do loop é interrompida.\nÉ ideal para situações em que o número de repetições é desconhecido previamente, como esperar por uma entrada válida do usuário ou repetir uma ação até que um evento específico ocorra.";
   String challenge = "Conte de 1 até 5 usando while.";
   
   drawInfo("While", explanation, pu8, challenge);
@@ -193,7 +193,7 @@ void drawLevel8() {
   }
 }
 
-// Level 9: Listas
+// Level 9: Lists
 void drawLevel9() {
   String explanation = "Listas em Python são como uma caixa onde você pode guardar 2 ou mais itens.\nUsando colchetes ([]) após chamar a lista, você pode acessar os itens individualmente.\nA ordem dos itens começa com 0.";
   String challenge = "Crie uma lista com 3 comidas favoritas e mostre cada uma na tela.";
@@ -235,12 +235,12 @@ void drawLevel10() {
   }
 }
 
-// Level 11: For
+// Level 11: For (len)
 void drawLevel11() {
-  String explanation = "Explicação não fornecida para este nível.";
-  String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";
+  String explanation = "Um dos principais acompanhantes do \"for\" é o \"len\". Quando é colocado na frente de umma lista, o termo passa a significar a quantidade de itens da lista.";
+  String challenge = "Mostre quantos itens há em uma lista de cores.";
   
-  drawInfo("Level 11", explanation, pu11, challenge);
+  drawInfo("Len", explanation, pu11, challenge);
 
   // show picked code middle right
   String code = "";
@@ -258,8 +258,8 @@ void drawLevel11() {
 
 // Level 12: For
 void drawLevel12() {
-  String explanation = "Explicação não fornecida para este nível.";
-  String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";
+  String explanation = "O \"range\" é um acompanhante que cria uma sequência de números para serem usados no \"for\" e em outras situações. Quando números são colocados após o \"range\" e entre parênteses, eles determinam o funcionamento no \"range\".";
+  String challenge = "Mostre os números de 1 até 10 com for e range.";
   
   drawInfo("Level 12", explanation, pu12, challenge);
 

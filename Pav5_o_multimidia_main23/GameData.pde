@@ -5,8 +5,8 @@ int[] answerLevel1 = { 0, 1, 2 };
 
 // fase2
 String[] optionsLevel2 = { 
-    "idade =", "15", "altura =", "1.70", 
-    "nome =", "Lucas", "tem_cachorro =", "True"
+    " idade =", "15\n", "altura =", "1.70\n", 
+    "nome =", "Lucas\n", "tem_cachorro =", "True"
 };
 boolean[] usedOptionLevel2 = { false, false, false, false, false, false, false, false };
 int[] answerLevel2 = { 0, 1, 2, 3, 4, 5, 6, 7 };
@@ -22,7 +22,7 @@ int[] answerLevel3 = { 0, 1, 2 };
 
 // fase4
 String[] optionsLevel4 = { 
-    "nome = input(\"Digite seu nome: \")", 
+    "nome = input(\"Digite seu nome: \")\n", 
     "print(\"Bem-vindo\", nome, \"!\")"
 };
 boolean[] usedOptionLevel4 = { false, false };
@@ -30,8 +30,8 @@ int[] answerLevel4 = { 0, 1 };
 
 // fase5
 String[] optionsLevel5 = { 
-    "n1 = int(input(\"Digite o primeiro número: \"))", 
-    "n2 = int(input(\"Digite o segundo número: \"))",
+    "n1 = int(input(\"Digite o primeiro número: \"))\n", 
+    "n2 = int(input(\"Digite o segundo número: \"))\n",
     "print(\"A soma é:\", n1 + n2)"
 };
 boolean[] usedOptionLevel5 = { false, false, false };
@@ -39,7 +39,7 @@ int[] answerLevel5 = { 0, 1, 2 };
 
 // fase6
 String[] optionsLevel6 = { 
-    "idade = int(input(\"Digite sua idade: \"))", 
+    "idade = int(input(\"Digite sua idade: \"))\n", 
     "print(\"Maior de idade?\", idade >= 18)"
 };
 boolean[] usedOptionLevel6 = { false, false };
@@ -47,23 +47,23 @@ int[] answerLevel6 = { 0, 1 };
 
 // fase7
 String[] optionsLevel7 = { 
-    "nota = float(input(\"Digite sua nota: \"))",
-    "if nota >= 6:",
-    "  print(\"Aprovado\")",
-    "else:",
-    "  print(\"Reprovado\")"
+    "nota = float(input(\"Digite sua nota: \"))\n",
+    "if nota >= 6:\n",
+    "  print(\"Aprovado\")\n",
+    "else:\n",
+    "  print(\"Reprovado\")\n"
 };
 boolean[] usedOptionLevel7 = { false, false, false, false, false };
 int[] answerLevel7 = { 0, 1, 2, 3, 4 };
 
 // fase8
 String[] optionsLevel8 = { 
-    "nota = float(input(\"Digite sua nota: \"))",
-    "if nota >= 9: ",
-    "  print(\"Excelente!\")",
-    "elif nota >= 6:",
-    "  print(\"Bom trabalho!\")",
-    "else:",
+    "nota = float(input(\"Digite sua nota: \"))\n",
+    "if nota >= 9: \n",
+    "  print(\"Excelente!\")\n",
+    "elif nota >= 6:\n",
+    "  print(\"Bom trabalho!\")\n",
+    "else:\n",
     "  print(\"Precisa melhorar.\")"
 };
 boolean[] usedOptionLevel8 = { false, false, false, false, false, false, false };
@@ -71,9 +71,9 @@ int[] answerLevel8 = { 0, 1, 2, 3, 4, 5, 6 };
 
 // fase9
 String[] optionsLevel9 = { 
-    "numero = 1",
-    "while numero <= 5:",
-    "  print(numero)",
+    "numero = 1\n",
+    "while numero <= 5:\n",
+    "  print(numero)\n",
     "  numero += 1"
 };
 boolean[] usedOptionLevel9 = { false, false, false, false };
@@ -81,9 +81,9 @@ int[] answerLevel9 = { 0, 1, 2, 3 };
 
 // fase10
 String[] optionsLevel10 = { 
-    "comidas = [\"pizza\", \"hambúrguer\", \"sorvete\"]",
-    "print(comidas[0])",
-    "print(comidas[1])",
+    "comidas = [\"pizza\", \"hambúrguer\", \"sorvete\"]\n",
+    "print(comidas[0])\n",
+    "print(comidas[1])\n",
     "print(comidas[2])"
 };
 boolean[] usedOptionLevel10 = { false, false, false, false };
@@ -91,8 +91,8 @@ int[] answerLevel10 = { 0, 1, 2, 3 };
 
 // fase11
 String[] optionsLevel11= { 
-    "amigos = [\"Ana\", \"Pedro\", \"João\"]",
-    "for nome in amigos:",
+    "amigos = [\"Ana\", \"Pedro\", \"João\"]\n",
+    "for nome in amigos:\n",
     "  print(\"Olá,\", nome, \"!\")"
 };
 boolean[] usedOptionLevel11 = { false, false, false };
@@ -100,7 +100,7 @@ int[] answerLevel11 = { 0, 1, 2 };
 
 // fase12
 String[] optionsLevel12 = { 
-    "cores = [\"azul\", \"verde\", \"vermelho\", \"amarelo\"]",
+    "cores = [\"azul\", \"verde\", \"vermelho\", \"amarelo\"]\n",
     "print(\"Número de cores na lista:\", len(cores))"
 };
 boolean[] usedOptionLevel12 = { false, false};
@@ -108,7 +108,7 @@ int[] answerLevel12 = { 0, 1 };
 
 // fase13
 String[] optionsLevel13 = { 
-    "for numero in range(1, 11):",
+    "for numero in range(1, 11):\n",
     "  print(numero)"
 };
 boolean[] usedOptionLevel13 = { false, false };
