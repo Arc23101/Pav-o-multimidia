@@ -14,6 +14,8 @@ boolean hasCelebrated = false;
 
 
 void drawGame() {
+  println("Picked size: " + picked.size() + " / Options length: " + usedOptionsLevels[currentLevel].length);
+
   basicInterface();
   
   switch(currentLevel) {
@@ -28,9 +30,9 @@ void drawGame() {
   case 9: drawLevel9(); break;
   case 10: drawLevel10(); break;
   case 11: drawLevel11(); break;
-  case 12: drawLevel12(); break;
-  case 13: drawLevel12(); break;
-  }
+  case 12: drawLevel12(); break;  // Only one case for Level 12
+}
+
   
   if (isCorrect(answersLevels[currentLevel]) && !hasCelebrated) {
   image(confetti, width/2, confettiH, width, height);
@@ -39,6 +41,7 @@ void drawGame() {
   if (confettiH > height) {
     hasCelebrated = true;
   }
+
   }
 }
 
@@ -91,7 +94,7 @@ void handleGameClick() {
     String[] options = optionsLevels[currentLevel];
     boolean[] used = usedOptionsLevels[currentLevel];
     
-    // remove last if click on middle
+    // remove last if clicked in middle area
     if (mouseX > width/2 &&
         mouseX < width &&
         mouseY > 0 &&
@@ -99,68 +102,47 @@ void handleGameClick() {
 
       if (picked.size() > 0) {
         int lastIndex = picked.remove(picked.size()-1);
-        usedOptionsLevels[currentLevel][lastIndex] = false;
+        usedOptionsLevels[currentLevel][lastIndex] = false;  // Mark the option as unused
       }
-       return;
+      return;
     }
 
     // check clickable options (only if not removed)
-    
-
     for (int i = 0; i < options.length; i++) {
-
       float bx = width/2 + padding;
       float by = height/2 + padding * 2 + i*40;
 
-      if (mouseX > bx && mouseX < bx+200 &&
+      if (mouseX > bx && mouseX < bx + 200 &&
           mouseY > by && mouseY < by + 40) {
 
-        if (!used[i]) {
-          picked.add(i);
-          used[i] = true;
+        if (!used[i]) {  // If option is not already used
+          picked.add(i);  // Add to picked list
+          used[i] = true;  // Mark as used
         }
       }
     }
   }
 
-  if (mouseX > btnX && mouseX < btnX+btnW &&
-      mouseY > btnY && mouseY < btnY+btnH) {
+  // Check if the user clicked on the "CONTINUAR" button
+  if (mouseX > btnX && mouseX < btnX + btnW &&
+      mouseY > btnY && mouseY < btnY + btnH) {
 
-          if (picked.size() == optionsLevels[currentLevel].length) {
-      
-            if (isCorrect(answersLevels[currentLevel])) {
-              hasCelebrated = false;
-              confettiH = -height;
-              
-              if (currentLevel >= 12) {
-                currentLevel = 1;
-                Arrays.fill(usedOptionsLevels[currentLevel], false);
-                state = 2;
-              } else {
-                currentLevel++;
+    if (picked.size() == optionsLevels[currentLevel].length) {  // All options picked
+      if (isCorrect(answersLevels[currentLevel])) {  // If the answer is correct
+        hasCelebrated = false;
+        confettiH = -height;  // Start confetti animation
         
-                picked.clear();
-                Arrays.fill(usedOptionsLevels[currentLevel], false);
-              }
-          }
-       }
+        picked.clear();  // Clear picked options
+        Arrays.fill(usedOptionsLevels[currentLevel], false);  // Reset used options
+
+        // Move to next level or restart if at level 12
+        if (currentLevel >= 12) {
+          currentLevel = 1;  // Reset to level 1
+          state = 2;  // Change game state if needed
+        } else {
+          currentLevel++;  // Go to next level
+        }
+      }
     }
-}
-
-void drawLevelTitle(String topic) {
-  float rectX = padding;
-  float rectY = padding;
-  float rectW = 200;
-  float rectH = 40;  
-  
-  fill(blue3); 
-  noStroke();
-  rect(rectX, rectY, rectW, rectH); 
-  
-  textAlign(CENTER, CENTER);
-  fill(#ffffff);
-  textSize(20);
-  text(topic, rectX + rectW/2, rectY + rectH/2);
-
-  textAlign(LEFT, BASELINE); 
+  }
 }
