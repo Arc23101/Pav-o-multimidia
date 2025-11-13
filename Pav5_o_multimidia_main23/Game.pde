@@ -14,8 +14,6 @@ boolean hasCelebrated = false;
 
 
 void drawGame() {
-  println("Picked size: " + picked.size() + " / Options length: " + usedOptionsLevels[currentLevel].length);
-
   basicInterface();
   
   switch(currentLevel) {
@@ -130,7 +128,7 @@ void handleGameClick() {
     if (picked.size() == optionsLevels[currentLevel].length) {  // All options picked
       if (isCorrect(answersLevels[currentLevel])) {  // If the answer is correct
         hasCelebrated = false;
-        confettiH = -height;  // Start confetti animation
+        confettiH = -height;  
         
         picked.clear();  // Clear picked options
         Arrays.fill(usedOptionsLevels[currentLevel], false);  // Reset used options

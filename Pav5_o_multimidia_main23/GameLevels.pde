@@ -24,7 +24,7 @@ void drawInfo(String topic, String explanation, PImage exampleImage, String chal
   
 }
 
-// Level 1: Variáveis
+// Level 1: Variables
 void drawLevel1() {
   String explanation = "[  ] Int \nInt é usada para números que sejam inteiros, ou seja, números que representam quantidades que não sejam quebradas. Esses números pode ser tanto negativo, como positivo. Exemplo: quantidade de doces no pote, carros estacionados.\n[  ] Float\nUtilizada para representar números decimais, como medidas, percentuais ou números que contenham parte fracionária. Exemplo: altura, peso.\n[  ] String\nSão utilizadas para representar e manipular textos, ou seja,  usado para armazenar informações de texto. Exemplo: nome, mensagem.\n[  ] Bool\nÉ utilizado para representar valores lógicos,  podendo assumir valores de verdadeiro ou falso. Exemplo: janela fechada ou aberta";
   String challenge = "Crie quatro variáveis diferentes (uma de cada tipo: int, float, str, bool) e use print() para mostrar o valor de cada uma delas na tela.";
@@ -45,9 +45,7 @@ void drawLevel1() {
   }
 }
 
-// levels
-
-
+// Level 2: Print
 void drawLevel2() {
   String explanation = "A função PRINT é a forma mais básica e crucial de comunicar o programa com o usuário,\nsendo usada para exibir na tela mensagens de texto, os valores armazenados em variáveis\nou o resultado final de qualquer cálculo ou processamento de dados realizado internamente.";
   String challenge = "Mostre na tela uma frase que diga um nome e o que gosta de fazer..";
@@ -68,7 +66,7 @@ void drawLevel2() {
   }
 }
 
-
+// Level 3: Inout
 void drawLevel3() {
   String explanation = "O comando INPUT é essencial, pois permite que o programa solicite e capture dados\ndiretamente do usuário enquanto está em execução, fazendo com que ele pause a ação e\nespere que uma informação, como um nome ou número, seja digitada e armazenada em\numa variável";
   String challenge = "Peça o nome do usuário e mostre uma mensagem de boas-vindas";
@@ -89,7 +87,7 @@ void drawLevel3() {
   }
 }
 
-
+// Level 4: Operations
 void drawLevel4() {
   String explanation = "Os operadores matemáticos (+,-,*,/ e outros) são os símbolos que seu código utiliza para\nrealizar todas as operações numéricas necessárias, permitindo que você calcule novos\nvalores a partir de dados existentes, como somar preços ou dividir quantidades, e então\nusar esses resultados.";
   String challenge = "Peça dois números e mostre a soma deles.";
@@ -110,7 +108,7 @@ void drawLevel4() {
   }
 }
 
-
+// Level 5: Operations
 void drawLevel5() {
   String explanation = "Os Operadores de Comparação (==,>,<,!=, etc.) são usados para testar relações entre valores (se são iguais, diferentes, maiores ou menores). O resultado dessas comparações é sempre um valor booleano: True (Verdadeiro) se a condição for atendida ou False (Falso) se não for.\n== : igual\n>= : maior ou igual\n<= : menor ou igual\n!= : diferente que\n> : maior que \n< : menor que";
   String challenge = "Peça a idade de uma pessoa e diga se ela é maior de idade (18 ou mais).";
@@ -237,7 +235,7 @@ void drawLevel10() {
   }
 }
 
-// Level 11: [Duplicate Level]
+// Level 11: For
 void drawLevel11() {
   String explanation = "Explicação não fornecida para este nível.";
   String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";
@@ -258,7 +256,7 @@ void drawLevel11() {
   }
 }
 
-// Level 12: [Duplicate Level]
+// Level 12: For
 void drawLevel12() {
   String explanation = "Explicação não fornecida para este nível.";
   String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";

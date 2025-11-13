@@ -114,7 +114,6 @@ String[] optionsLevel13 = {
 boolean[] usedOptionLevel13 = { false, false };
 int[] answerLevel13 = { 0, 1 };
 
-// Now, I will aggregate the above data into the final arrays:
 String[][] optionsLevels = {
     optionsLevel1,
     optionsLevel2,
