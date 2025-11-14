@@ -1,26 +1,21 @@
-void drawInfo(String topic, String explanation, PImage exampleImage, String challenge) { 
-  float rectX = padding;
-  float rectY = padding;
-  float rectW = 200;
-  float rectH = 40;  
+void drawInfo(String topic, String explanation, PImage exampleImage, String challenge) {  
   
   fill(blue3); 
   noStroke();
-  rect(rectX, rectY, rectW, rectH); 
+  rect(padding, padding, width/2 - padding*2, 40); 
+  rect(width/2 + padding, padding, width/2 - padding*2, 40); 
   
-  textAlign(CENTER, CENTER);
   fill(#ffffff);
   textSize(24);
-  text(topic, rectX + rectW/2, rectY + rectH/2);
-
-  textAlign(LEFT, BASELINE); 
+  text(topic, padding*2, padding*2 + 5);
+  text("Desafio: ", width/2 + padding*2, padding*2 + 5);
   
-  text(explanation, padding, padding * 4 + 50, width / 2 - padding * 2, height - padding * 6);
+  text(explanation, padding, padding * 5, width / 2 - padding * 2, height - padding * 6);
   
   image(exampleImage, width / 4, height / 4 + height / 2 - padding, 650, 300);
   
   // Challenge title
-  text(challenge, width / 2 + padding, padding * 2, width / 2 - padding * 8, height - padding * 6);
+  text(challenge, width / 2 + padding, padding * 5, width / 2 - padding * 8, height - padding * 6);
   
 }
 
@@ -36,7 +31,7 @@ void drawLevel1() {
   for (int idx : picked) {
     code += optionsLevel2[idx] + " ";
   }
-  text(code, width/2 + padding, padding * 8, width/2 - padding * 8, height - padding * 6);
+  text(code, width/2 + padding, padding * 10, width/2 - padding * 8, height - padding * 6);
 
   for (int i = 0; i < optionsLevel2.length; i++) {
     float bx = width/2 + padding;

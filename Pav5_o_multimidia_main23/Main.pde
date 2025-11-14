@@ -11,9 +11,13 @@ color blue2 = #79A6CC;
 color blue3 = #689BC6;
 color darkBlue = #376E9D;
 color yellow = #FFCC3C;
+int middleOfScreen = 0;
+float speed = 1;
+float minY, maxY;
+boolean goingDown = true;
 
 // media
-PImage img, confetti, pu1, pu2, pu3, pu4, pu5, pu6, pu7, pu8, pu9, pu10, pu11, pu12;
+PImage img, confetti, pu1, pu2, pu3, pu4, pu5, pu6, pu7, pu8, pu9, pu10, pu11, pu12, py;
 
 import ddf.minim.*;
 Minim minim;
@@ -23,6 +27,10 @@ AudioPlayer music, click1, click3, right, wrong;
 void setup() {
   size(1720, 980);
   pixelDensity(1);
+  middleOfScreen = height/2;
+  
+  minY = middleOfScreen - 40;   // adjust animation range
+  maxY = middleOfScreen + 30;
   
   // images
   pu1 = loadImage("pu1.png");
@@ -38,6 +46,7 @@ void setup() {
   pu11 = loadImage("pu11.png");
   pu12 = loadImage("pu12.png");
   confetti = loadImage("confetti.png");
+  py = loadImage("python.png");
   
   // font
   f = createFont("Pixellari.ttf", 32);

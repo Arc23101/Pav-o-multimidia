@@ -11,6 +11,7 @@ int btnH = 50;
 
 int confettiH = height;
 boolean hasCelebrated = false;
+boolean hasMadeSound = false;
 
 
 void drawGame() {
@@ -29,17 +30,31 @@ void drawGame() {
   case 10: drawLevel10(); break;
   case 11: drawLevel11(); break;
   case 12: drawLevel12(); break;  // Only one case for Level 12
-}
-
-  
-  if (isCorrect(answersLevels[currentLevel]) && !hasCelebrated) {
-  image(confetti, width/2, confettiH, width, height);
-  confettiH = confettiH + 40;
-  
-  if (confettiH > height) {
-    hasCelebrated = true;
   }
-
+  
+  boolean canCheck = picked.size() == usedOptionsLevels[currentLevel].length;
+  
+  if (canCheck) {
+    boolean correct = isCorrect(answersLevels[currentLevel]);
+  
+    if (correct && !hasCelebrated) {
+      image(confetti, width/2, confettiH, width, height);
+      confettiH += 40;
+  
+      if (confettiH > height) hasCelebrated = true;
+  
+      if (!hasMadeSound) {
+        right.rewind();
+        right.play();
+        hasMadeSound = true;
+      }
+    }
+  
+    if (!correct && !hasMadeSound) {
+      wrong.rewind();
+      wrong.play();
+      hasMadeSound = true;
+    }
   }
 }
 
@@ -116,6 +131,7 @@ void handleGameClick() {
         if (!used[i]) {  // If option is not already used]
           picked.add(i);  // Add to picked list
           used[i] = true;  // Mark as used
+          hasMadeSound = false;
         }
       }
     }
@@ -131,22 +147,20 @@ void handleGameClick() {
       if (isCorrect(answersLevels[currentLevel])) {  // If the answer is correct
         hasCelebrated = false;
         confettiH = -height; 
-        right.rewind();
-        right.play();
         
         picked.clear();  // Clear picked options
         Arrays.fill(usedOptionsLevels[currentLevel], false);  // Reset used options
 
         // Move to next level or restart if at level 12
         if (currentLevel >= 12) {
+          hasMadeSound = false;
           currentLevel = 1;  // Reset to level 1
           state = 2;  // Change game state if needed
         } else {
+          hasMadeSound = false;
           currentLevel++;  // Go to next level
         }
-    } else {
-      wrong.rewind();
-      wrong.play();
+      }
     }
   }
 }

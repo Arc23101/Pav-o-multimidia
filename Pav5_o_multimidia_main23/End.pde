@@ -8,10 +8,10 @@ void drawEnd() {
   
   textSize(120);
   fill(darkBlue);
-  text("Muito bom!", width/2, height/2);
+  text("Muito bom!", width/2, middleOfScreen);
   
   fill(yellow);
-  text("Muito Bom!", width/2, height/2 - 10);
+  text("Muito Bom!", width/2, middleOfScreen - 10);
 
   noStroke();
   fill(darkBlue);
@@ -24,6 +24,18 @@ void drawEnd() {
   textSize(24);
   text("Jogar novamente", width/2, height/2 + height/4 - 10);
   
+  textSize(20);
+  fill(#ffffff);
+  text("Agora você é um mago da computação!!!", width/2, height/1.5 + padding*8);
+  
+  if (goingDown) {
+    middleOfScreen += speed;
+    if (middleOfScreen >= maxY) goingDown = false;
+  } else {
+    middleOfScreen -= speed;
+    if (middleOfScreen <= minY) goingDown = true;
+  }
+  
   rectMode(CORNER);
   textAlign(LEFT, BASELINE);
 }
@@ -35,6 +47,7 @@ void handleEndClick() {
         mouseY < height/2 + height/4 - 10 + padding * 2) {
           click3.rewind();
           click3.play();
+          middleOfScreen = height/2;
           state = 0;
         }else {
           click1.rewind();
