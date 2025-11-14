@@ -33,7 +33,7 @@ void drawMenu() {
   fill(#ffffff);
   text("Como jogar:", width/2, height/1.5 + padding*3);
   text("Selecione os pedaços de código que achar correto no último quadrante.", width/2, height/1.5 + padding*4);
-  text("Clique na área penúltimo quadrante para remover o que for necessário e poder tentar novamente.", width/2, height/1.5 + padding*5);
+  text("Clique no penúltimo quadrante para remover o que for necessário e poder tentar novamente.", width/2, height/1.5 + padding*5);
   
   if (goingDown) {
     middleOfScreen += speed;

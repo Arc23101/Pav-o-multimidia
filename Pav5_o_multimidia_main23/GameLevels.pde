@@ -12,7 +12,7 @@ void drawInfo(String topic, String explanation, PImage exampleImage, String chal
   
   text(explanation, padding, padding * 5, width / 2 - padding * 2, height - padding * 6);
   
-  image(exampleImage, width / 4, height / 4 + height / 2 - padding, 650, 300);
+  image(exampleImage, width / 4, height - padding*8, 650, 300);
   
   // Challenge title
   text(challenge, width / 2 + padding, padding * 5, width / 2 - padding * 8, height - padding * 6);
@@ -21,7 +21,7 @@ void drawInfo(String topic, String explanation, PImage exampleImage, String chal
 
 // Level 1: Variables
 void drawLevel1() {
-  String explanation = "[  ] Int \nInt é usada para números que sejam inteiros, ou seja, números que representam quantidades que não sejam quebradas. Esses números pode ser tanto negativo, como positivo. Exemplo: quantidade de doces no pote, carros estacionados.\n[  ] Float\nUtilizada para representar números decimais, como medidas, percentuais ou números que contenham parte fracionária. Exemplo: altura, peso.\n[  ] String\nSão utilizadas para representar e manipular textos, ou seja,  usado para armazenar informações de texto. Exemplo: nome, mensagem.\n[  ] Bool\nÉ utilizado para representar valores lógicos,  podendo assumir valores de verdadeiro ou falso. Exemplo: janela fechada ou aberta";
+  String explanation = "[  ] Int \nInt é usada para números que sejam inteiros, ou seja, números que representam quantidades que não sejam quebradas. Esses números podem ser tanto negativos quanto positivos. Exemplo: quantidade de doces no pote, carros estacionados.\n\n[  ] Float\nUtilizada para representar números decimais, como medidas, percentuais ou números que contenham parte fracionária. Exemplo: altura, peso.\n\n[  ] String\nUsada para representar e manipular textos, ou seja, utilizada para armazenar informações de texto. Exemplo: nome, mensagem.\n\n[  ] Bool\nUsada para representar valores lógicos, podendo assumir verdadeiro ou falso. Exemplo: janela fechada ou aberta.";
   String challenge = "Crie quatro variáveis diferentes (uma de cada tipo: int, float, str, bool) e use print() para mostrar o valor de cada uma delas na tela.";
   
   drawInfo("Variáveis", explanation, pu1, challenge);
@@ -42,7 +42,7 @@ void drawLevel1() {
 
 // Level 2: Print
 void drawLevel2() {
-  String explanation = "A função PRINT é a forma mais básica e crucial de comunicar o programa com o usuário,\nsendo usada para exibir na tela mensagens de texto, os valores armazenados em variáveis\nou o resultado final de qualquer cálculo ou processamento de dados realizado internamente.";
+  String explanation = "[  ] Print()\nA função print() é uma das formas mais simples e importantes de comunicação entre o programa e o usuário. Ela coloca na tela mensagens de texto, valores guardados em variáveis ou resultados de cálculos feitos pelo código.\n\nSempre que você quer entender o que está acontecendo no seu programa ou mostrar uma resposta para o usuário, o print() é a ferramenta ideal. Ele funciona como a 'voz' do programa, exibindo qualquer informação que você quiser.";
   String challenge = "Mostre na tela uma frase que diga um nome e o que gosta de fazer..";
   
   drawInfo("Print", explanation, pu2, challenge);
@@ -63,7 +63,7 @@ void drawLevel2() {
 
 // Level 3: Inout
 void drawLevel3() {
-  String explanation = "O comando INPUT é essencial, pois permite que o programa solicite e capture dados\ndiretamente do usuário enquanto está em execução, fazendo com que ele pause a ação e\nespere que uma informação, como um nome ou número, seja digitada e armazenada em\numa variável";
+  String explanation = "[  ] Input()\nO comando input() deixa o programa fazer perguntas ao usuário e esperar uma resposta. Quando o input() é chamado, o programa pausa até que o usuário digite algo e aperte Enter.\n\nEssa resposta é então guardada dentro de uma variável, permitindo criar programas interativos, como formulários, jogos, escolhas e diálogos. O input() torna possível receber nomes, números ou qualquer informação vinda do usuário.";
   String challenge = "Peça o nome do usuário e mostre uma mensagem de boas-vindas";
   
   drawInfo("Input", explanation, pu3, challenge);
@@ -84,7 +84,7 @@ void drawLevel3() {
 
 // Level 4: Operations
 void drawLevel4() {
-  String explanation = "Os operadores matemáticos (+,-,*,/ e outros) são os símbolos que seu código utiliza para\nrealizar todas as operações numéricas necessárias, permitindo que você calcule novos\nvalores a partir de dados existentes, como somar preços ou dividir quantidades, e então\nusar esses resultados.";
+  String explanation = "Os operadores matemáticos (+, -, *, / e outros) permitem que o programa realize cálculos. Eles servem para somar valores, subtrair quantidades, multiplicar números ou dividir resultados.\n\nEsses operadores aparecem o tempo todo em situações de compras, pontuações, medidas e em qualquer cálculo necessário no código. Usando operadores, você pode criar expressões mais complexas e gerar novos valores baseados em dados já existentes.";
   String challenge = "Peça dois números e mostre a soma deles.";
   
   drawInfo("Operações Matemáticas", explanation, pu4, challenge);
@@ -105,7 +105,7 @@ void drawLevel4() {
 
 // Level 5: Operations
 void drawLevel5() {
-  String explanation = "Os Operadores de Comparação (==,>,<,!=, etc.) são usados para testar relações entre valores (se são iguais, diferentes, maiores ou menores). O resultado dessas comparações é sempre um valor booleano: True (Verdadeiro) se a condição for atendida ou False (Falso) se não for.\n== : igual\n>= : maior ou igual\n<= : menor ou igual\n!= : diferente que\n> : maior que \n< : menor que";
+  String explanation = "[  ] Aritméticos\nUsados para realizar cálculos matemáticos, como soma (+), subtração (-), multiplicação (*) e divisão (/). Exemplo: calcular total de pontos ou média.\n\n[  ] Relacionais\nComparam valores e retornam verdadeiro ou falso. Exemplos: >, <, ==. Exemplo: verificar se uma idade é maior que 18.\n\n[  ] Lógicos\nCombinam condições usando AND (&&), OR (||) e NOT (!). Exemplo: verificar se uma pessoa é maior de idade E possui autorização.";
   String challenge = "Peça a idade de uma pessoa e diga se ela é maior de idade (18 ou mais).";
   
   drawInfo("Operações de Comparação", explanation, pu5, challenge);
@@ -127,8 +127,8 @@ void drawLevel5() {
 
 // Level 6: If
 void drawLevel6() {
-  String explanation = "[  ] If\nUsado para tomar decisões em um determinado programa, executando uma determinada ação somente se a ação for verdadeira.";
-  String challenge = "#Peça a nota de um aluno e diga se ele foi aprovado (nota ≥ 6).";
+  String explanation = "[  ] If()\nO comando if permite que o programa tome decisões. Ele executa um trecho de código apenas quando uma condição for verdadeira.\n\nÉ como dizer: 'se isso acontecer, faça aquilo'.\nO if é fundamental para criar comportamentos inteligentes, como permitir acesso somente a certas pessoas, exibir mensagens diferentes conforme uma condição ou reagir a ações durante um jogo.\nSem o if, o programa sempre faria tudo igual, sem escolhas.";
+  String challenge = "Peça a nota de um aluno e diga se ele foi aprovado (nota >= 6).";
   
   drawInfo("If", explanation, pu6, challenge);
 
@@ -148,7 +148,7 @@ void drawLevel6() {
 
 // Level 7: Elif / Else
 void drawLevel7() {
-  String explanation = "O elif e o else são acompanhantes quase obrigatórios do if. São as outras condições que complementam a primeira.\nO else não precisa de uma condição, pois ele engloba tudo que não está no if e elif";
+  String explanation = "[  ] If()\nExecuta um bloco de código somente se uma condição for verdadeira. Exemplo: se pontos > 10, então você ganha um bônus.\n\n[  ] Else()\nExecuta quando a condição do if é falsa. Exemplo: se pontos não forem suficientes, mostrar mensagem de erro.\n\n[  ] Else if()\nPermite testar várias condições em sequência. Exemplo: verificar níveis como iniciante, intermediário ou avançado.";
   String challenge = "Peça a nota do aluno e mostre uma mensagem diferente para cada faixa de nota.";
   
   drawInfo("Elif / Else", explanation, pu7, challenge);
@@ -169,7 +169,7 @@ void drawLevel7() {
 
 // Level 8: While
 void drawLevel8() {
-  String explanation = "É usado como um recurso para executar um bloco de códigos receitas vezes enquanto é a ação do verdadeira. Quando a ação  pass a ser falsa, a execução do loop é interrompida.\nÉ ideal para situações em que o número de repetições é desconhecido previamente, como esperar por uma entrada válida do usuário ou repetir uma ação até que um evento específico ocorra.";
+  String explanation = "[  ] While()\nO while cria um loop que repete um conjunto de instruções enquanto uma condição for verdadeira. Assim que a condição se tornar falsa, o loop para automaticamente.\n\nIsso é útil quando você não sabe quantas repetições serão necessárias, como pedir novamente uma senha até vir a correta ou repetir uma ação até que o usuário faça algo válido.\n\nO while permite repetir tarefas sem precisar escrever o mesmo código várias vezes.";
   String challenge = "Conte de 1 até 5 usando while.";
   
   drawInfo("While", explanation, pu8, challenge);
@@ -190,7 +190,7 @@ void drawLevel8() {
 
 // Level 9: Lists
 void drawLevel9() {
-  String explanation = "Listas em Python são como uma caixa onde você pode guardar 2 ou mais itens.\nUsando colchetes ([]) após chamar a lista, você pode acessar os itens individualmente.\nA ordem dos itens começa com 0.";
+  String explanation = "[  ] Array\nEstrutura que armazena vários valores do mesmo tipo. Exemplo: lista de nomes ou pontuações.\n\n[  ] Acesso por índice\nCada posição tem um número começando em 0. Exemplo: array[0] acessa o primeiro item.\n\n[  ] Tamanho\nUsado para saber quantos elementos existem no array. Exemplo: array.length.";
   String challenge = "Crie uma lista com 3 comidas favoritas e mostre cada uma na tela.";
   
   drawInfo("Listas", explanation, pu9, challenge);
@@ -211,7 +211,7 @@ void drawLevel9() {
 
 // Level 10: For
 void drawLevel10() {
-  String explanation = "O for é um laço de repetição. Ele repete uma ação para cada item até alcançar a condição pré-determinada.\nTradução: Para cada item na lista, faça isso.";
+  String explanation = "[  ] For()\nRepete um bloco de código um número específico de vezes. Exemplo: percorrer uma lista de itens.\n\n[  ] While\nRepete enquanto uma condição for verdadeira. Exemplo: continuar jogo enquanto vidas > 0.\n\n[  ] Do While\nParecido com while, mas garante que o código execute ao menos uma vez antes de testar a condição.";
   String challenge = "Use um for para mostrar todos os nomes de uma lista de amigos.";
   
   drawInfo("For", explanation, pu10, challenge);
@@ -232,7 +232,7 @@ void drawLevel10() {
 
 // Level 11: For (len)
 void drawLevel11() {
-  String explanation = "Um dos principais acompanhantes do \"for\" é o \"len\". Quando é colocado na frente de umma lista, o termo passa a significar a quantidade de itens da lista.";
+  String explanation = "[  ] Len()\nA função len() mostra quantos itens existem em uma lista ou sequência. É muito útil quando você precisa saber o tamanho de algo antes de percorrer ou quando quer usar esse número em um cálculo.\n\nEla funciona como um contador automático e é frequentemente usada junto com loops, principalmente o for, deixando o código flexível e organizado.";
   String challenge = "Mostre quantos itens há em uma lista de cores.";
   
   drawInfo("Len", explanation, pu11, challenge);
@@ -253,7 +253,7 @@ void drawLevel11() {
 
 // Level 12: For
 void drawLevel12() {
-  String explanation = "O \"range\" é um acompanhante que cria uma sequência de números para serem usados no \"for\" e em outras situações. Quando números são colocados após o \"range\" e entre parênteses, eles determinam o funcionamento no \"range\".";
+  String explanation = "[  ] Range()\nO range() cria uma sequência de números que pode ser usada dentro de um for para controlar repetições. Ele pode começar no 0 ou em outro valor que você escolher.\n\nVocê também pode definir onde a sequência termina e qual será o passo entre os números.\n\nO range é perfeito para criar contadores, loops numéricos, movimentos repetitivos e várias tarefas automáticas dentro do programa.";
   String challenge = "Mostre os números de 1 até 10 com for e range.";
   
   drawInfo("Level 12", explanation, pu12, challenge);
