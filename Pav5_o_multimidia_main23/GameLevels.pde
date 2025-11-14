@@ -256,7 +256,7 @@ void drawLevel12() {
   String explanation = "[  ] Range()\nO range() cria uma sequência de números que pode ser usada dentro de um for para controlar repetições. Ele pode começar no 0 ou em outro valor que você escolher.\n\nVocê também pode definir onde a sequência termina e qual será o passo entre os números.\n\nO range é perfeito para criar contadores, loops numéricos, movimentos repetitivos e várias tarefas automáticas dentro do programa.";
   String challenge = "Mostre os números de 1 até 10 com for e range.";
   
-  drawInfo("Level 12", explanation, pu12, challenge);
+  drawInfo("Range", explanation, pu12, challenge);
 
   // show picked code middle right
   String code = "";
